@@ -1,0 +1,581 @@
+[Search] backbone=efficientnet_v2_s | mode=holdout | search_method=random
+[Search] search_dir=./runs_backbone_search/search_efficientnet_v2_s_20260308_155013
+[Search] candidates prepared=12
+
+==========================================================================================
+[Trial 1] search_efficientnet_v2_s_holdout_t001
+{
+  "img_size": 320,
+  "batch_size": 16,
+  "learning_rate": 0.0015,
+  "backbone_lr": 0.0001,
+  "weight_decay": 0.005,
+  "dropout": 0.2,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 1,
+  "dev_oversample_factor": 1.0,
+  "class_balance": 0,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t001_20260308_155013
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 01/10 | TrainLoss 0.59667 | ValidBCE 0.64947 | RawLL 0.64947 | CalLL 0.61156 | Acc 0.66000 | T 1.826
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 02/10 | TrainLoss 0.19810 | ValidBCE 0.97701 | RawLL 0.97701 | CalLL 0.58594 | Acc 0.72000 | T 3.710
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 03/10 | TrainLoss 0.14095 | ValidBCE 0.52012 | RawLL 0.52012 | CalLL 0.43238 | Acc 0.80000 | T 1.879
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 04/10 | TrainLoss 0.11778 | ValidBCE 0.44405 | RawLL 0.44405 | CalLL 0.38048 | Acc 0.84000 | T 1.724
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 05/10 | TrainLoss 0.10417 | ValidBCE 0.88607 | RawLL 0.88607 | CalLL 0.56366 | Acc 0.71000 | T 3.281
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 06/10 | TrainLoss 0.08667 | ValidBCE 0.64788 | RawLL 0.64788 | CalLL 0.47009 | Acc 0.81000 | T 2.341
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 07/10 | TrainLoss 0.09165 | ValidBCE 1.13103 | RawLL 1.13103 | CalLL 0.62189 | Acc 0.65000 | T 4.720
+[search_efficientnet_v2_s_holdout_t001 | holdout] Epoch 08/10 | TrainLoss 0.08391 | ValidBCE 1.08132 | RawLL 1.08132 | CalLL 0.61419 | Acc 0.66000 | T 4.375
+[search_efficientnet_v2_s_holdout_t001] early stopping at epoch 8 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t001",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t001_20260308_155013/submission_holdout.csv",
+  "valid_logloss_cal": 0.3804765498088986,
+  "dev_logloss_cal": 0.3804765498088986,
+  "valid_accuracy": 0.84
+}
+[Trial 1] objective=0.380477 | elapsed=54.7s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 2] search_efficientnet_v2_s_holdout_t002
+{
+  "img_size": 320,
+  "batch_size": 16,
+  "learning_rate": 0.0005,
+  "backbone_lr": 0.0002,
+  "weight_decay": 0.02,
+  "dropout": 0.2,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.2,
+  "mixup_prob": 0.4,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 2.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t002_20260308_155108
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 01/10 | TrainLoss 0.50124 | ValidBCE 0.31657 | RawLL 0.31657 | CalLL 0.31652 | Acc 0.82000 | T 0.979
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 02/10 | TrainLoss 0.22045 | ValidBCE 0.23687 | RawLL 0.23687 | CalLL 0.23502 | Acc 0.90000 | T 0.898
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 03/10 | TrainLoss 0.19642 | ValidBCE 0.18230 | RawLL 0.18230 | CalLL 0.17487 | Acc 0.93000 | T 0.801
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 04/10 | TrainLoss 0.17002 | ValidBCE 0.26068 | RawLL 0.26068 | CalLL 0.26049 | Acc 0.89000 | T 1.037
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 05/10 | TrainLoss 0.14292 | ValidBCE 0.32150 | RawLL 0.32150 | CalLL 0.30958 | Acc 0.87000 | T 1.269
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 06/10 | TrainLoss 0.16014 | ValidBCE 0.30722 | RawLL 0.30722 | CalLL 0.28273 | Acc 0.88000 | T 1.409
+[search_efficientnet_v2_s_holdout_t002 | holdout] Epoch 07/10 | TrainLoss 0.18198 | ValidBCE 0.20594 | RawLL 0.20594 | CalLL 0.19889 | Acc 0.90000 | T 0.807
+[search_efficientnet_v2_s_holdout_t002] early stopping at epoch 7 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t002",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t002_20260308_155108/submission_holdout.csv",
+  "valid_logloss_cal": 0.1748672799612908,
+  "dev_logloss_cal": 0.1748672799612908,
+  "valid_accuracy": 0.93
+}
+[Trial 2] objective=0.174867 | elapsed=47.4s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 3] search_efficientnet_v2_s_holdout_t003
+{
+  "img_size": 320,
+  "batch_size": 16,
+  "learning_rate": 0.0015,
+  "backbone_lr": 0.0001,
+  "weight_decay": 0.01,
+  "dropout": 0.3,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 2.0,
+  "class_balance": 0,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t003_20260308_155155
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 01/10 | TrainLoss 0.41975 | ValidBCE 0.69486 | RawLL 0.69486 | CalLL 0.47953 | Acc 0.76000 | T 2.627
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 02/10 | TrainLoss 0.14324 | ValidBCE 0.66286 | RawLL 0.66286 | CalLL 0.46391 | Acc 0.81000 | T 2.409
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 03/10 | TrainLoss 0.15321 | ValidBCE 0.80362 | RawLL 0.80362 | CalLL 0.53353 | Acc 0.78000 | T 2.894
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 04/10 | TrainLoss 0.10780 | ValidBCE 0.68715 | RawLL 0.68715 | CalLL 0.48447 | Acc 0.74000 | T 2.480
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 05/10 | TrainLoss 0.10137 | ValidBCE 1.33202 | RawLL 1.33202 | CalLL 0.64309 | Acc 0.65000 | T 5.990
+[search_efficientnet_v2_s_holdout_t003 | holdout] Epoch 06/10 | TrainLoss 0.09705 | ValidBCE 1.21230 | RawLL 1.21230 | CalLL 0.62233 | Acc 0.68000 | T 4.948
+[search_efficientnet_v2_s_holdout_t003] early stopping at epoch 6 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t003",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t003_20260308_155155/submission_holdout.csv",
+  "valid_logloss_cal": 0.4639113088151269,
+  "dev_logloss_cal": 0.4639113088151269,
+  "valid_accuracy": 0.81
+}
+[Trial 3] objective=0.463911 | elapsed=41.3s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 4] search_efficientnet_v2_s_holdout_t004
+{
+  "img_size": 384,
+  "batch_size": 12,
+  "learning_rate": 0.0015,
+  "backbone_lr": 0.0001,
+  "weight_decay": 0.005,
+  "dropout": 0.4,
+  "label_smoothing": 0.1,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 3.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t004_20260308_155236
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 01/10 | TrainLoss 0.55385 | ValidBCE 0.46665 | RawLL 0.46665 | CalLL 0.46296 | Acc 0.77000 | T 1.164
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 02/10 | TrainLoss 0.28362 | ValidBCE 0.37769 | RawLL 0.37769 | CalLL 0.37551 | Acc 0.85000 | T 0.889
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 03/10 | TrainLoss 0.25162 | ValidBCE 0.31033 | RawLL 0.31033 | CalLL 0.31032 | Acc 0.87000 | T 0.987
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 04/10 | TrainLoss 0.25237 | ValidBCE 0.23415 | RawLL 0.23415 | CalLL 0.21275 | Acc 0.94000 | T 0.667
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 05/10 | TrainLoss 0.23012 | ValidBCE 0.25570 | RawLL 0.25570 | CalLL 0.24899 | Acc 0.88000 | T 0.816
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 06/10 | TrainLoss 0.22696 | ValidBCE 0.35893 | RawLL 0.35893 | CalLL 0.35664 | Acc 0.86000 | T 1.119
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 07/10 | TrainLoss 0.21950 | ValidBCE 0.24694 | RawLL 0.24694 | CalLL 0.23880 | Acc 0.91000 | T 0.792
+[search_efficientnet_v2_s_holdout_t004 | holdout] Epoch 08/10 | TrainLoss 0.20827 | ValidBCE 0.25197 | RawLL 0.25197 | CalLL 0.24392 | Acc 0.90000 | T 0.784
+[search_efficientnet_v2_s_holdout_t004] early stopping at epoch 8 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t004",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t004_20260308_155236/submission_holdout.csv",
+  "valid_logloss_cal": 0.21275339383096434,
+  "dev_logloss_cal": 0.21275339383096434,
+  "valid_accuracy": 0.94
+}
+[Trial 4] objective=0.212753 | elapsed=75.8s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 5] search_efficientnet_v2_s_holdout_t005
+{
+  "img_size": 384,
+  "batch_size": 8,
+  "learning_rate": 0.0005,
+  "backbone_lr": 0.0002,
+  "weight_decay": 0.005,
+  "dropout": 0.2,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 2.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t005_20260308_155352
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 01/10 | TrainLoss 0.47343 | ValidBCE 1.04538 | RawLL 1.04538 | CalLL 0.65349 | Acc 0.62000 | T 5.208
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 02/10 | TrainLoss 0.24576 | ValidBCE 0.59340 | RawLL 0.59340 | CalLL 0.47691 | Acc 0.77000 | T 2.070
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 03/10 | TrainLoss 0.18754 | ValidBCE 0.97058 | RawLL 0.97058 | CalLL 0.56325 | Acc 0.75000 | T 3.540
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 04/10 | TrainLoss 0.19020 | ValidBCE 0.46949 | RawLL 0.46949 | CalLL 0.46119 | Acc 0.83000 | T 1.293
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 05/10 | TrainLoss 0.13624 | ValidBCE 0.60375 | RawLL 0.60375 | CalLL 0.47673 | Acc 0.77000 | T 2.147
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 06/10 | TrainLoss 0.10557 | ValidBCE 0.48421 | RawLL 0.48421 | CalLL 0.43183 | Acc 0.81000 | T 1.692
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 07/10 | TrainLoss 0.10096 | ValidBCE 0.65891 | RawLL 0.65891 | CalLL 0.50751 | Acc 0.76000 | T 2.341
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 08/10 | TrainLoss 0.08976 | ValidBCE 0.76783 | RawLL 0.76783 | CalLL 0.53336 | Acc 0.74000 | T 2.782
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 09/10 | TrainLoss 0.08827 | ValidBCE 0.86188 | RawLL 0.86188 | CalLL 0.55989 | Acc 0.73000 | T 3.155
+[search_efficientnet_v2_s_holdout_t005 | holdout] Epoch 10/10 | TrainLoss 0.08704 | ValidBCE 0.81041 | RawLL 0.81041 | CalLL 0.54669 | Acc 0.73000 | T 2.947
+[search_efficientnet_v2_s_holdout_t005] early stopping at epoch 10 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t005",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t005_20260308_155352/submission_holdout.csv",
+  "valid_logloss_cal": 0.431827011087193,
+  "dev_logloss_cal": 0.431827011087193,
+  "valid_accuracy": 0.81
+}
+[Trial 5] objective=0.431827 | elapsed=88.8s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 6] search_efficientnet_v2_s_holdout_t006
+{
+  "img_size": 384,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "backbone_lr": 5e-05,
+  "weight_decay": 0.01,
+  "dropout": 0.3,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.2,
+  "mixup_prob": 0.25,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 3.0,
+  "class_balance": 0,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t006_20260308_155521
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 01/10 | TrainLoss 0.47341 | ValidBCE 0.57910 | RawLL 0.57910 | CalLL 0.52774 | Acc 0.74000 | T 1.756
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 02/10 | TrainLoss 0.21330 | ValidBCE 0.37656 | RawLL 0.37656 | CalLL 0.37193 | Acc 0.84000 | T 1.186
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 03/10 | TrainLoss 0.14313 | ValidBCE 0.52969 | RawLL 0.52969 | CalLL 0.45943 | Acc 0.81000 | T 1.793
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 04/10 | TrainLoss 0.12929 | ValidBCE 0.67182 | RawLL 0.67182 | CalLL 0.51634 | Acc 0.77000 | T 2.299
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 05/10 | TrainLoss 0.13895 | ValidBCE 0.59854 | RawLL 0.59854 | CalLL 0.47628 | Acc 0.81000 | T 2.087
+[search_efficientnet_v2_s_holdout_t006 | holdout] Epoch 06/10 | TrainLoss 0.15711 | ValidBCE 0.68523 | RawLL 0.68523 | CalLL 0.52551 | Acc 0.76000 | T 2.390
+[search_efficientnet_v2_s_holdout_t006] early stopping at epoch 6 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t006",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t006_20260308_155521/submission_holdout.csv",
+  "valid_logloss_cal": 0.37193026479347635,
+  "dev_logloss_cal": 0.37193026479347635,
+  "valid_accuracy": 0.84
+}
+[Trial 6] objective=0.371930 | elapsed=54.6s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 7] search_efficientnet_v2_s_holdout_t007
+{
+  "img_size": 320,
+  "batch_size": 12,
+  "learning_rate": 0.001,
+  "backbone_lr": 0.0001,
+  "weight_decay": 0.02,
+  "dropout": 0.4,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.2,
+  "mixup_prob": 0.25,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 1.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t007_20260308_155616
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 01/10 | TrainLoss 0.44137 | ValidBCE 1.22173 | RawLL 1.22173 | CalLL 0.62877 | Acc 0.63000 | T 5.365
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 02/10 | TrainLoss 0.22441 | ValidBCE 0.80519 | RawLL 0.80519 | CalLL 0.56355 | Acc 0.71000 | T 2.947
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 03/10 | TrainLoss 0.20079 | ValidBCE 0.74760 | RawLL 0.74760 | CalLL 0.53974 | Acc 0.75000 | T 2.654
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 04/10 | TrainLoss 0.12472 | ValidBCE 0.87817 | RawLL 0.87817 | CalLL 0.56621 | Acc 0.70000 | T 3.281
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 05/10 | TrainLoss 0.11942 | ValidBCE 0.73126 | RawLL 0.73126 | CalLL 0.50953 | Acc 0.74000 | T 2.606
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 06/10 | TrainLoss 0.15603 | ValidBCE 0.40676 | RawLL 0.40676 | CalLL 0.38396 | Acc 0.84000 | T 1.395
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 07/10 | TrainLoss 0.13018 | ValidBCE 0.32652 | RawLL 0.32652 | CalLL 0.31242 | Acc 0.87000 | T 1.306
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 08/10 | TrainLoss 0.11057 | ValidBCE 0.33763 | RawLL 0.33763 | CalLL 0.31829 | Acc 0.86000 | T 1.369
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 09/10 | TrainLoss 0.10842 | ValidBCE 0.31185 | RawLL 0.31185 | CalLL 0.29551 | Acc 0.86000 | T 1.330
+[search_efficientnet_v2_s_holdout_t007 | holdout] Epoch 10/10 | TrainLoss 0.13526 | ValidBCE 0.38065 | RawLL 0.38065 | CalLL 0.34337 | Acc 0.85000 | T 1.520
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t007",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t007_20260308_155616/submission_holdout.csv",
+  "valid_logloss_cal": 0.29551449660769774,
+  "dev_logloss_cal": 0.29551449660769774,
+  "valid_accuracy": 0.86
+}
+[Trial 7] objective=0.295514 | elapsed=68.4s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 8] search_efficientnet_v2_s_holdout_t008
+{
+  "img_size": 384,
+  "batch_size": 12,
+  "learning_rate": 0.0005,
+  "backbone_lr": 5e-05,
+  "weight_decay": 0.02,
+  "dropout": 0.4,
+  "label_smoothing": 0.05,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 1,
+  "dev_oversample_factor": 3.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t008_20260308_155724
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 01/10 | TrainLoss 0.66403 | ValidBCE 0.67356 | RawLL 0.67356 | CalLL 0.64331 | Acc 0.62000 | T 1.860
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 02/10 | TrainLoss 0.34713 | ValidBCE 0.48810 | RawLL 0.48810 | CalLL 0.44860 | Acc 0.81000 | T 1.598
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 03/10 | TrainLoss 0.16926 | ValidBCE 0.71205 | RawLL 0.71205 | CalLL 0.52257 | Acc 0.75000 | T 2.506
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 04/10 | TrainLoss 0.16946 | ValidBCE 0.73106 | RawLL 0.73106 | CalLL 0.52573 | Acc 0.74000 | T 2.606
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 05/10 | TrainLoss 0.14164 | ValidBCE 0.41599 | RawLL 0.41599 | CalLL 0.37180 | Acc 0.84000 | T 1.565
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 06/10 | TrainLoss 0.16439 | ValidBCE 0.65502 | RawLL 0.65502 | CalLL 0.50400 | Acc 0.78000 | T 2.275
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 07/10 | TrainLoss 0.13630 | ValidBCE 0.65451 | RawLL 0.65451 | CalLL 0.49886 | Acc 0.78000 | T 2.275
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 08/10 | TrainLoss 0.13205 | ValidBCE 0.68773 | RawLL 0.68773 | CalLL 0.51363 | Acc 0.78000 | T 2.409
+[search_efficientnet_v2_s_holdout_t008 | holdout] Epoch 09/10 | TrainLoss 0.13949 | ValidBCE 0.66876 | RawLL 0.66876 | CalLL 0.50516 | Acc 0.79000 | T 2.341
+[search_efficientnet_v2_s_holdout_t008] early stopping at epoch 9 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t008",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t008_20260308_155724/submission_holdout.csv",
+  "valid_logloss_cal": 0.37179950308215426,
+  "dev_logloss_cal": 0.37179950308215426,
+  "valid_accuracy": 0.84
+}
+[Trial 8] objective=0.371800 | elapsed=80.3s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 9] search_efficientnet_v2_s_holdout_t009
+{
+  "img_size": 320,
+  "batch_size": 12,
+  "learning_rate": 0.0005,
+  "backbone_lr": 5e-05,
+  "weight_decay": 0.02,
+  "dropout": 0.4,
+  "label_smoothing": 0.05,
+  "mixup_alpha": 0.2,
+  "mixup_prob": 0.4,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 1,
+  "dev_oversample_factor": 2.0,
+  "class_balance": 0,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t009_20260308_155844
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 01/10 | TrainLoss 0.66717 | ValidBCE 0.71317 | RawLL 0.71317 | CalLL 0.67202 | Acc 0.57000 | T 2.480
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 02/10 | TrainLoss 0.41153 | ValidBCE 0.63981 | RawLL 0.63981 | CalLL 0.51656 | Acc 0.73000 | T 2.193
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 03/10 | TrainLoss 0.21940 | ValidBCE 0.69069 | RawLL 0.69069 | CalLL 0.54224 | Acc 0.71000 | T 2.341
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 04/10 | TrainLoss 0.21273 | ValidBCE 0.67453 | RawLL 0.67453 | CalLL 0.52884 | Acc 0.73000 | T 2.275
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 05/10 | TrainLoss 0.18877 | ValidBCE 0.87526 | RawLL 0.87526 | CalLL 0.58657 | Acc 0.71000 | T 3.213
+[search_efficientnet_v2_s_holdout_t009 | holdout] Epoch 06/10 | TrainLoss 0.19172 | ValidBCE 0.65603 | RawLL 0.65603 | CalLL 0.52433 | Acc 0.74000 | T 2.193
+[search_efficientnet_v2_s_holdout_t009] early stopping at epoch 6 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t009",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t009_20260308_155844/submission_holdout.csv",
+  "valid_logloss_cal": 0.516561468196909,
+  "dev_logloss_cal": 0.516561468196909,
+  "valid_accuracy": 0.73
+}
+[Trial 9] objective=0.516561 | elapsed=39.9s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 10] search_efficientnet_v2_s_holdout_t010
+{
+  "img_size": 320,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "backbone_lr": 5e-05,
+  "weight_decay": 0.005,
+  "dropout": 0.2,
+  "label_smoothing": 0.03,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 0,
+  "dev_oversample_factor": 2.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t010_20260308_155924
+[search_efficientnet_v2_s_holdout_t010 | holdout] Epoch 01/10 | TrainLoss 0.48621 | ValidBCE 0.45400 | RawLL 0.45400 | CalLL 0.42406 | Acc 0.79000 | T 1.520
+[search_efficientnet_v2_s_holdout_t010 | holdout] Epoch 02/10 | TrainLoss 0.20876 | ValidBCE 0.53149 | RawLL 0.53149 | CalLL 0.49496 | Acc 0.74000 | T 1.598
+[search_efficientnet_v2_s_holdout_t010 | holdout] Epoch 03/10 | TrainLoss 0.13120 | ValidBCE 0.92139 | RawLL 0.92139 | CalLL 0.57966 | Acc 0.70000 | T 3.439
+[search_efficientnet_v2_s_holdout_t010 | holdout] Epoch 04/10 | TrainLoss 0.12554 | ValidBCE 0.59072 | RawLL 0.59072 | CalLL 0.45838 | Acc 0.80000 | T 2.130
+[search_efficientnet_v2_s_holdout_t010 | holdout] Epoch 05/10 | TrainLoss 0.11541 | ValidBCE 0.62729 | RawLL 0.62729 | CalLL 0.45115 | Acc 0.78000 | T 2.299
+[search_efficientnet_v2_s_holdout_t010] early stopping at epoch 5 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t010",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t010_20260308_155924/submission_holdout.csv",
+  "valid_logloss_cal": 0.424059055393092,
+  "dev_logloss_cal": 0.424059055393092,
+  "valid_accuracy": 0.79
+}
+[Trial 10] objective=0.424059 | elapsed=34.6s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 11] search_efficientnet_v2_s_holdout_t011
+{
+  "img_size": 384,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "backbone_lr": 0.0002,
+  "weight_decay": 0.005,
+  "dropout": 0.4,
+  "label_smoothing": 0.0,
+  "mixup_alpha": 0.2,
+  "mixup_prob": 0.4,
+  "aug_profile": "strong",
+  "freeze_backbone_epochs": 1,
+  "dev_oversample_factor": 1.0,
+  "class_balance": 1,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t011_20260308_155959
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 01/10 | TrainLoss 0.69900 | ValidBCE 0.65192 | RawLL 0.65192 | CalLL 0.65187 | Acc 0.59000 | T 1.037
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 02/10 | TrainLoss 0.32543 | ValidBCE 0.40967 | RawLL 0.40967 | CalLL 0.38658 | Acc 0.84000 | T 1.424
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 03/10 | TrainLoss 0.18725 | ValidBCE 0.17490 | RawLL 0.17490 | CalLL 0.17077 | Acc 0.89000 | T 0.816
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 04/10 | TrainLoss 0.15252 | ValidBCE 0.59800 | RawLL 0.59800 | CalLL 0.47306 | Acc 0.75000 | T 2.147
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 05/10 | TrainLoss 0.07614 | ValidBCE 0.30961 | RawLL 0.30961 | CalLL 0.28804 | Acc 0.88000 | T 1.424
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 06/10 | TrainLoss 0.09974 | ValidBCE 0.45758 | RawLL 0.45758 | CalLL 0.37319 | Acc 0.82000 | T 1.845
+[search_efficientnet_v2_s_holdout_t011 | holdout] Epoch 07/10 | TrainLoss 0.11021 | ValidBCE 0.56029 | RawLL 0.56029 | CalLL 0.43454 | Acc 0.83000 | T 2.130
+[search_efficientnet_v2_s_holdout_t011] early stopping at epoch 7 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t011",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t011_20260308_155959/submission_holdout.csv",
+  "valid_logloss_cal": 0.17076612107174985,
+  "dev_logloss_cal": 0.17076612107174985,
+  "valid_accuracy": 0.89
+}
+[Trial 11] objective=0.170766 | elapsed=61.6s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Trial 12] search_efficientnet_v2_s_holdout_t012
+{
+  "img_size": 384,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "backbone_lr": 5e-05,
+  "weight_decay": 0.02,
+  "dropout": 0.4,
+  "label_smoothing": 0.05,
+  "mixup_alpha": 0.0,
+  "mixup_prob": 0.0,
+  "aug_profile": "light",
+  "freeze_backbone_epochs": 1,
+  "dev_oversample_factor": 3.0,
+  "class_balance": 0,
+  "epochs": 10,
+  "mode": "holdout"
+}
+Device: cuda | AMP: True
+Backbone: efficientnet_v2_s | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Run dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t012_20260308_160100
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 01/10 | TrainLoss 0.62235 | ValidBCE 0.97380 | RawLL 0.97380 | CalLL 0.66711 | Acc 0.57000 | T 5.156
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 02/10 | TrainLoss 0.35632 | ValidBCE 0.57423 | RawLL 0.57423 | CalLL 0.51180 | Acc 0.72000 | T 1.807
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 03/10 | TrainLoss 0.16736 | ValidBCE 0.84062 | RawLL 0.84062 | CalLL 0.59132 | Acc 0.68000 | T 3.097
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 04/10 | TrainLoss 0.15591 | ValidBCE 0.74478 | RawLL 0.74478 | CalLL 0.55938 | Acc 0.70000 | T 2.606
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 05/10 | TrainLoss 0.12950 | ValidBCE 0.59630 | RawLL 0.59630 | CalLL 0.49812 | Acc 0.76000 | T 1.991
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 06/10 | TrainLoss 0.13650 | ValidBCE 0.69761 | RawLL 0.69761 | CalLL 0.52782 | Acc 0.75000 | T 2.409
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 07/10 | TrainLoss 0.12597 | ValidBCE 0.64355 | RawLL 0.64355 | CalLL 0.51875 | Acc 0.72000 | T 2.170
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 08/10 | TrainLoss 0.12347 | ValidBCE 0.73671 | RawLL 0.73671 | CalLL 0.54600 | Acc 0.71000 | T 2.552
+[search_efficientnet_v2_s_holdout_t012 | holdout] Epoch 09/10 | TrainLoss 0.12643 | ValidBCE 0.80039 | RawLL 0.80039 | CalLL 0.56376 | Acc 0.72000 | T 2.841
+[search_efficientnet_v2_s_holdout_t012] early stopping at epoch 9 (patience=4)
+
+[Holdout Summary]
+{
+  "run_name": "search_efficientnet_v2_s_holdout_t012",
+  "mode": "holdout",
+  "backbone": "efficientnet_v2_s",
+  "submission": "./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/trial_runs/search_efficientnet_v2_s_holdout_t012_20260308_160100/submission_holdout.csv",
+  "valid_logloss_cal": 0.49811682895169596,
+  "dev_logloss_cal": 0.49811682895169596,
+  "valid_accuracy": 0.76
+}
+[Trial 12] objective=0.498117 | elapsed=85.1s
+[Search] updated history -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_history.csv
+[Search] updated ranking -> ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013/search_ranking.csv
+
+==========================================================================================
+[Search Done]
+search_dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013
+budget used: 0.20h / 6.00h
+[Top trials]
+ trial_idx                              run_name  objective  dev_logloss_cal  valid_logloss_cal  img_size  batch_size  learning_rate  backbone_lr  weight_decay  dropout  label_smoothing  mixup_alpha  mixup_prob aug_profile  dev_oversample_factor  class_balance
+        11 search_efficientnet_v2_s_holdout_t011   0.170766         0.170766           0.170766       384           8         0.0010      0.00020         0.005      0.4             0.00          0.2        0.40      strong                    1.0              1
+         2 search_efficientnet_v2_s_holdout_t002   0.174867         0.174867           0.174867       320          16         0.0005      0.00020         0.020      0.2             0.03          0.2        0.40      strong                    2.0              1
+         4 search_efficientnet_v2_s_holdout_t004   0.212753         0.212753           0.212753       384          12         0.0015      0.00010         0.005      0.4             0.10          0.0        0.00      strong                    3.0              1
+         7 search_efficientnet_v2_s_holdout_t007   0.295514         0.295514           0.295514       320          12         0.0010      0.00010         0.020      0.4             0.03          0.2        0.25       light                    1.0              1
+         8 search_efficientnet_v2_s_holdout_t008   0.371800         0.371800           0.371800       384          12         0.0005      0.00005         0.020      0.4             0.05          0.0        0.00      strong                    3.0              1
+         6 search_efficientnet_v2_s_holdout_t006   0.371930         0.371930           0.371930       384           8         0.0010      0.00005         0.010      0.3             0.03          0.2        0.25       light                    3.0              0
+         1 search_efficientnet_v2_s_holdout_t001   0.380477         0.380477           0.380477       320          16         0.0015      0.00010         0.005      0.2             0.03          0.0        0.00       light                    1.0              0
+        10 search_efficientnet_v2_s_holdout_t010   0.424059         0.424059           0.424059       320           8         0.0010      0.00005         0.005      0.2             0.03          0.0        0.00      strong                    2.0              1
+         5 search_efficientnet_v2_s_holdout_t005   0.431827         0.431827           0.431827       384           8         0.0005      0.00020         0.005      0.2             0.03          0.0        0.00       light                    2.0              1
+         3 search_efficientnet_v2_s_holdout_t003   0.463911         0.463911           0.463911       320          16         0.0015      0.00010         0.010      0.3             0.03          0.0        0.00       light                    2.0              0
+
+Standalone search finished for EfficientNet-V2-S
+Search dir: ./runs_backbone_search/search_efficientnet_v2_s_20260308_155013

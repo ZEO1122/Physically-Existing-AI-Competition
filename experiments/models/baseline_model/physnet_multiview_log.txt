@@ -1,0 +1,29 @@
+Device: cuda | AMP: True
+Backbone: physnet_resnet34_multiview | Mode: holdout
+Train samples: 1000 | Dev samples: 100 | Test samples: 1000
+Motion aux: True | Motion timepoints: (2.5, 5.0, 7.5, 10.0)
+Run dir: ./runs_physnet_baseline/physnet_multiview_20260308_174441
+[physnet_multiview | holdout] Epoch 01/16 | TrainLoss 0.66249 | ValidBCE 0.56271 | RawLL 0.56271 | CalLL 0.52510 | Acc 0.75000 | T 1.598
+[physnet_multiview | holdout] Epoch 02/16 | TrainLoss 0.42295 | ValidBCE 1.02607 | RawLL 1.02607 | CalLL 0.60137 | Acc 0.72000 | T 3.930
+[physnet_multiview | holdout] Epoch 03/16 | TrainLoss 0.26819 | ValidBCE 1.05755 | RawLL 1.05755 | CalLL 0.59039 | Acc 0.73000 | T 4.045
+[physnet_multiview | holdout] Epoch 04/16 | TrainLoss 0.21862 | ValidBCE 1.09224 | RawLL 1.09224 | CalLL 0.60353 | Acc 0.70000 | T 4.285
+[physnet_multiview | holdout] Epoch 05/16 | TrainLoss 0.16522 | ValidBCE 0.70105 | RawLL 0.70105 | CalLL 0.45928 | Acc 0.82000 | T 2.627
+[physnet_multiview | holdout] Epoch 06/16 | TrainLoss 0.17006 | ValidBCE 0.75586 | RawLL 0.75586 | CalLL 0.49708 | Acc 0.82000 | T 2.760
+[physnet_multiview | holdout] Epoch 07/16 | TrainLoss 0.16052 | ValidBCE 0.75841 | RawLL 0.75841 | CalLL 0.49234 | Acc 0.79000 | T 2.760
+[physnet_multiview | holdout] Epoch 08/16 | TrainLoss 0.13567 | ValidBCE 0.77412 | RawLL 0.77412 | CalLL 0.48940 | Acc 0.79000 | T 2.841
+[physnet_multiview | holdout] Epoch 09/16 | TrainLoss 0.13218 | ValidBCE 0.95213 | RawLL 0.95213 | CalLL 0.54602 | Acc 0.74000 | T 3.503
+[physnet_multiview | holdout] Epoch 10/16 | TrainLoss 0.12102 | ValidBCE 0.89732 | RawLL 0.89732 | CalLL 0.52516 | Acc 0.75000 | T 3.281
+[physnet_multiview] early stopping at epoch 10 (patience=5)
+
+[Holdout Summary]
+{
+  "run_name": "physnet_multiview",
+  "mode": "holdout",
+  "backbone": "physnet_resnet34_multiview",
+  "submission": "./runs_physnet_baseline/physnet_multiview_20260308_174441/submission_holdout.csv",
+  "valid_logloss_cal": 0.459281193032132,
+  "dev_logloss_cal": 0.459281193032132,
+  "valid_accuracy": 0.82
+}
+
+Done. Outputs saved to: ./runs_physnet_baseline/physnet_multiview_20260308_174441

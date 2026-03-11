@@ -1,0 +1,121 @@
+# ------------------------------------------------------------
+# Portfolio-oriented gitignore for this competition workspace
+# 목표:
+# - GitHub에는 README, 코드, 전략/분석 문서만 남긴다.
+# - 데이터, 제출물, 로그, 체크포인트, 예측값, 샘플 복사본은 제외한다.
+# ------------------------------------------------------------
+
+# OS / editor / cache
+.DS_Store
+._*
+__pycache__/
+*.pyc
+*.pyo
+*.ipynb_checkpoints/
+.vscode/
+
+# Duplicate compatibility links / old paths
+codex_test
+data_reconstrcture
+model_file
+data_analyze
+dataset_report
+대회정보 정리.md
+
+# ------------------------------------------------------------
+# Top-level directories to keep
+# ------------------------------------------------------------
+!README.md
+!experiments/
+!dataset_analysis/
+
+# ------------------------------------------------------------
+# experiments: keep docs and code, ignore generated artifacts
+# ------------------------------------------------------------
+
+# Generated outputs / logs / caches
+experiments/outputs/
+experiments/logs/
+experiments/analysis/
+experiments/__pycache__/
+
+# Raw competition data and heavyweight generated training artifacts
+experiments/training/open/
+experiments/training/runs_hybrid_structure_aware/
+experiments/training/runs_hybrid_structure_aware_gated_simaux/
+experiments/training/runs_render_consistency/
+experiments/training/voxel_recon_outputs/
+experiments/training/__pycache__/
+
+# Example/sample asset copies and derived visualizations
+experiments/assets/
+experiments/hybrid_input_breakdown
+experiments/hybrid_input_examples
+experiments/physnet_input_breakdown
+experiments/study_md_ordered
+
+# Root-level experiment outputs/reports that are submission/result oriented
+experiments/experiment_log.md
+experiments/overnight_experiments_20260310.md
+experiments/submission_score_note_20260310.md
+experiments/all_experiments_summary.md
+
+# Keep key docs and scripts
+!experiments/README.md
+!experiments/final_master_report.md
+!experiments/strategy.md
+!experiments/recommendations.md
+!experiments/augmentation_and_normalization_note.md
+!experiments/blending_note.md
+!experiments/train_vs_valid_loss_note.md
+!experiments/analyze_dataset.py
+!experiments/run_competition_pipeline.py
+!experiments/run_overnight_priority_queue.sh
+!experiments/docs/
+!experiments/docs/**
+!experiments/models/
+!experiments/models/**
+!experiments/training/
+!experiments/training/train_hybrid_structure_aware_gated_simaux.py
+!experiments/training/train_hybrid_structure_aware.py
+!experiments/training/train_render_consistency_fusion.py
+!experiments/training/analyze_hybrid_oof_diagnostics.py
+!experiments/training/voxel_reconstruction_roadmap.md
+!experiments/training/voxel_reconstruction_triptych.py
+
+# ------------------------------------------------------------
+# dataset_analysis: keep scripts, ignore generated reports
+# ------------------------------------------------------------
+dataset_analysis/reports/
+!dataset_analysis/scripts/
+!dataset_analysis/scripts/**
+
+# ------------------------------------------------------------
+# Generic large artifacts
+# ------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.npy
+*.npz
+*.parquet
+*.feather
+*.pkl
+*.joblib
+*.csv
+*.tsv
+*.json
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar
+*.gz
+
+# Re-allow documentation JSON/PNG only if later needed explicitly.
