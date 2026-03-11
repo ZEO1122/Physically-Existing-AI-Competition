@@ -91,6 +91,16 @@ dataset_analysis/reports/
 !dataset_analysis/scripts/**
 
 # ------------------------------------------------------------
+# Re-ignore caches and scratch files that can be re-included by broad allow rules
+# ------------------------------------------------------------
+experiments/**/__pycache__/
+experiments/**/*.pyc
+experiments/**/*.pyo
+experiments/**/*.log
+experiments/models/baseline_model/search_*.txt
+experiments/models/baseline_model/serach_*.txt
+
+# ------------------------------------------------------------
 # Generic large artifacts
 # ------------------------------------------------------------
 *.pt
